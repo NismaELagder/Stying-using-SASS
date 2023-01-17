@@ -1,0 +1,49 @@
+$bg-color: rgb(16, 46, 91);
+$primary-color: #d8936b;
+$secondary-color: #bd480d;
+$sizes: (14px, 16px, 18px);
+
+body {
+  background-color: $bg-color;
+}
+
+.main {
+  &-title {
+    background-color: $primary-color;
+  }
+
+  &-subtitle {
+    background-color: $secondary-color;
+  }
+  &-btn {
+    color: $primary-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+@each $size in $sizes {
+  .font-#{$size} {
+    font-size: $size;
+  }
+}
+/* .finish-btn {
+  @media(max-width: ;)
+} */
+
+$tablet: 577px;
+$mobile: 576px;
+
+.finish-btn {
+  @media all and (min-width: $tablet) {
+    & {
+      width: 50%;
+    }
+  }
+
+  @media all and (max-width: $mobile) {
+    width: 100%;
+  }
+}
